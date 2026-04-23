@@ -1,39 +1,46 @@
 # 💤 Personalized Sleep Quality Predictor
 
-## 🔍 Project Overview
-This project predicts:
-- A **sleep quality score** (0–100), and
-- Whether I will feel **tired the next day** (0 or 1),
+A machine learning project that analyzes daily habits to predict sleep quality scores and next-day fatigue. This repository demonstrates end-to-end ML workflows including data preprocessing, feature engineering, and predictive modeling using Scikit-Learn.
 
-based on my daily habits like sleep hours, screen time before bed, caffeine intake, stress level, exercise, steps, and bedtime category.
-
-## 📊 Dataset
-- File: `data/sleep_data.csv`
-- Each row = one night of sleep.
-- Columns include:
-  - `sleep_hours`
-  - `screen_time_before_bed`
-  - `caffeine_mg`
-  - `stress_level`
-  - `exercise_minutes`
-  - `steps`
-  - `bedtime_category`
-  - `sleep_quality_score`
-  - `tired_next_day`
-
-## 🧠 Models Used
-- **Linear Regression** → predicts `sleep_quality_score`
-- **Logistic Regression** → predicts `tired_next_day`
+## 📊 Project Overview
+The goal of this project is to understand how various lifestyle factors (sleep hours, caffeine, stress, screen time) impact overall sleep quality. It features two primary models:
+1. **Linear Regression:** To predict a continuous `sleep_quality_score` (0-100).
+2. **Logistic Regression:** To classify whether the user will feel `tired_next_day` (Binary).
 
 ## 🛠 Tech Stack
-- Python
-- pandas, numpy
-- scikit-learn
-- matplotlib, seaborn
-- Jupyter Notebook
+- **Languages:** Python 3.x
+- **ML Libraries:** Scikit-Learn, NumPy, Pandas
+- **Visualization:** Matplotlib, Seaborn
+- **Environment:** Jupyter Notebook / Google Colab
 
-## 🚀 How to Run
-1. Clone or download this repository.
-2. Install dependencies:
+## 📁 Repository Structure
+- `DATA/`: Contains the sleep habit dataset.
+- `NOTEBOOK/`: Jupyter notebooks with exploratory data analysis and model experimentation.
+- `plots/`: Generated visualizations from the analysis.
+- `main.py`: A production-ready script to train models and make predictions.
+- `requirements.txt`: List of dependencies.
+
+## 🚀 Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/amazephoenix-bit/sleep-quality-predictor.git
+   cd sleep-quality-predictor
+   ```
+
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
+   ```
+
+3. **Run the prediction script:**
+   ```bash
+   python main.py
+   ```
+
+## 🔮 Future Improvements
+- Transitioning to Pytorch for more complex sequence modeling (e.g., analyzing sleep patterns over time).
+- Integrating a web dashboard for real-time data logging and visualization.
+
+---
+*Developed as part of my AI/ML learning journey at Kristu Jayanti University.*
